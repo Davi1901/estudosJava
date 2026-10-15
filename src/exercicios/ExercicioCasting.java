@@ -1,4 +1,4 @@
-package fundamentos;
+package exercicios;
 
 public class ExercicioCasting {
     public static void main(String[] args){
