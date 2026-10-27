@@ -22,8 +22,8 @@ public class calculadoraPrograma {
 
         switch (operador){
             case '+' -> result = numero1 + numero2;
-            case '-' -> result = numero1 + numero2;
-            case '*' -> result = numero1 + numero2;
+            case '-' -> result = numero1 - numero2;
+            case '*' -> result = numero1 * numero2;
             case '/' -> {
                 if (numero2 == 0){
                     System.out.println("Não dá para divirdir com zero!");
@@ -35,6 +35,7 @@ public class calculadoraPrograma {
             case '^' -> result = Math.pow(numero1, numero2);
             default -> {
                 System.out.println("Operador inválido");
+                validarOperacao = false;
             }
         }
 
