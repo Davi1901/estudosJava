@@ -10,22 +10,20 @@ public class SistemaBusca {
         System.out.print("Digite um nome: ");
         String nomeDigitado = scanner.nextLine();
 
+        scanner.close();
+
         for (int i = 0; i < nomes.length; i++){
-            if (nomeDigitado.equalsIgnoreCase("Davi")){
+            if (nomeDigitado.equalsIgnoreCase(nomes[i])){
+                System.out.printf("Nome encontrado na posição: %d\n", i);
                 encontrado = true;
-            } else if (nomeDigitado.equalsIgnoreCase("Gabi")){
-                encontrado = true;
-            } else if (nomeDigitado.equalsIgnoreCase("Irene")){
-                encontrado = true;
-            } else if (nomeDigitado.equalsIgnoreCase("Fred")){
-                encontrado = true;
-            } else if (nomeDigitado.equalsIgnoreCase("Carlos")){
-                encontrado = true;
-            } else {
-                System.out.println("Nome não encontrado");
+                break;
             }
         }
-        System.out.println("Nome foi achado? " + encontrado);
+
+        if (!encontrado){
+            System.out.println("Nome não encontrado!");
+        }
+
 
     }
 }
