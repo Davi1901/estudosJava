@@ -11,6 +11,7 @@ public class ArrayComEntradaUsuario {
 
         System.out.print("Quantas frutas vão ter: ");
         qtaFrutas = scanner.nextInt();
+        scanner.nextLine();
 
         comidas = new String[qtaFrutas];
 
@@ -18,7 +19,7 @@ public class ArrayComEntradaUsuario {
         for (int i = 0; i < qtaFrutas; i++){
             System.out.print("Digite uma fruta: ");
             comidas[i] = scanner.nextLine();
-            scanner.nextLine();
+
         }
 
         for (String comida : comidas){
